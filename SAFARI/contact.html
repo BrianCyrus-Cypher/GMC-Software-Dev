@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Safari Horizon Tours</title>
+</head>
+<body>
+
+    <header>
+        <h1>Safari Horizon Tours</h1>
+        <p>Experience the Wild Beauty of Kenya</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="tours.html">Tours</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="contact-intro">
+            <h2>Contact Us</h2>
+            <p>Have questions about our safaris? Want to plan a custom itinerary? Get in touch with our team and we will respond within 24 hours.</p>
+        </section>
+
+        <section id="contact-details">
+            <h2>Our Office</h2>
+            <img src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=600" alt="Nairobi city skyline" width="500">
+
+            <address>
+                <p><strong>Safari Horizon Tours Ltd.</strong></p>
+                <p>14 Kenyatta Avenue, Suite 302</p>
+                <p>Nairobi 00100, Kenya</p>
+            </address>
+
+            <p><strong>Phone:</strong> +254 712 345 678</p>
+            <p><strong>WhatsApp:</strong> +254 723 456 789</p>
+            <p><strong>Email:</strong> info@safarihorizontours.co.ke</p>
+            <p><strong>Office Hours:</strong> Monday - Friday 8:00 AM - 6:00 PM (EAT), Saturday 9:00 AM - 1:00 PM (EAT)</p>
+        </section>
+
+        <section id="contact-form">
+            <h2>Send Us a Message</h2>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="fullname">Full Name *</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="e.g. John Smith" required>
+
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. john@example.com" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. +44 7700 900000">
+
+                    <label for="country">Country of Residence *</label>
+                    <input type="text" id="country" name="country" placeholder="e.g. United Kingdom" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Safari Details</legend>
+
+                    <label for="tour-interest">Tour Package Interest</label>
+                    <select id="tour-interest" name="tour-interest">
+                        <option value="">-- Select a Tour --</option>
+                        <option value="mara-classic">Mara Classic Safari (3 Days) - $1,200</option>
+                        <option value="big-five">Big Five Expedition (5 Days) - $2,450</option>
+                        <option value="grand-kenya">Grand Kenya Safari (7 Days) - $3,800</option>
+                        <option value="luxury-flying">Luxury Flying Safari (4 Days) - $4,200</option>
+                        <option value="amboseli">Amboseli Kilimanjaro Safari (4 Days) - $1,950</option>
+                        <option value="nakuru-day">Lake Nakuru Day Trip (1 Day) - $350</option>
+                        <option value="custom">Custom Itinerary</option>
+                        <option value="unsure">Not Sure Yet - Need Advice</option>
+                    </select>
+
+                    <label for="travel-date">Preferred Travel Date</label>
+                    <input type="date" id="travel-date" name="travel-date">
+
+                    <label for="group-size">Number of Travelers *</label>
+                    <input type="number" id="group-size" name="group-size" min="1" max="20" placeholder="e.g. 2" required>
+
+                    <label for="budget">Budget Range (USD per person)</label>
+                    <select id="budget" name="budget">
+                        <option value="">-- Select Budget --</option>
+                        <option value="under-1000">Under $1,000</option>
+                        <option value="1000-2000">$1,000 - $2,000</option>
+                        <option value="2000-3000">$2,000 - $3,000</option>
+                        <option value="3000-5000">$3,000 - $5,000</option>
+                        <option value="5000-plus">$5,000+</option>
+                    </select>
+
+                    <label for="accommodation">Accommodation Preference</label>
+                    <select id="accommodation" name="accommodation">
+                        <option value="">-- Select Preference --</option>
+                        <option value="standard">Standard Tented Camp</option>
+                        <option value="mid-range">Mid-Range Tented Lodge</option>
+                        <option value="luxury">Luxury Tented Camp</option>
+                        <option value="ultra-luxury">Ultra-Luxury Lodge</option>
+                        <option value="no-preference">No Preference</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+
+                    <label for="special-req">Special Requirements or Requests</label>
+                    <textarea id="special-req" name="special-req" rows="5" placeholder="e.g. dietary requirements, mobility needs, honeymoon arrangements, photography equipment..."></textarea>
+
+                    <label for="how-hear">How Did You Hear About Us?</label>
+                    <select id="how-hear" name="how-hear">
+                        <option value="">-- Select Option --</option>
+                        <option value="google">Google Search</option>
+                        <option value="tripadvisor">TripAdvisor</option>
+                        <option value="social-media">Social Media</option>
+                        <option value="friend">Friend or Family Referral</option>
+                        <option value="travel-agent">Travel Agent</option>
+                        <option value="magazine">Magazine or Article</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="message">Your Message *</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Tell us about your dream safari. What animals do you most want to see? Any specific dates in mind?" required></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Newsletter</legend>
+
+                    <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                    <label for="newsletter">Yes, I would like to receive Safari Horizon Tours newsletters with special offers and safari tips.</label>
+                </fieldset>
+
+                <p>* Required fields</p>
+
+                <button type="submit">Send Inquiry</button>
+                <button type="reset">Clear Form</button>
+            </form>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div>
+                <h3>Do I need a visa to visit Kenya?</h3>
+                <p>Most nationalities require a visa. You can apply for an e-Visa online at evisa.go.ke before your trip. We provide visa assistance information in your pre-departure pack.</p>
+            </div>
+
+            <div>
+                <h3>Is Kenya safe for tourists?</h3>
+                <p>Yes. Kenya is one of Africa's most popular tourist destinations with a well-established tourism infrastructure. Our guides are trained in safety protocols and we maintain constant communication with park authorities.</p>
+            </div>
+
+            <div>
+                <h3>What vaccinations do I need?</h3>
+                <p>Yellow fever vaccination is required if arriving from an endemic country. We recommend hepatitis A, typhoid, and ensuring your routine vaccinations are up to date. Consult your doctor 6-8 weeks before travel.</p>
+            </div>
+
+            <div>
+                <h3>What should I pack for a safari?</h3>
+                <p>Neutral-colored clothing (khaki, olive, brown), sturdy walking shoes, sun hat, sunscreen, binoculars, camera with zoom lens, and a light jacket for early morning drives. We send a detailed packing list upon booking.</p>
+            </div>
+
+            <div>
+                <h3>Can children go on safari?</h3>
+                <p>Absolutely. We offer family-friendly safaris with shorter game drives, kid-oriented guides, and educational activities. Children under 3 travel free. Ages 3-11 receive a 50% discount.</p>
+            </div>
+
+            <div>
+                <h3>What is the best time to visit Kenya?</h3>
+                <p>Year-round is great, but the dry seasons (June-October and January-February) offer the best wildlife viewing. The Great Migration in the Mara peaks from July to October.</p>
+            </div>
+        </section>
+
+        <section id="emergency">
+            <h2>Emergency Contact</h2>
+            <p>For existing guests currently on safari, our 24/7 emergency line is available:</p>
+            <p><strong>Emergency Hotline:</strong><a href="tel: +254 700 111 222"> +254 700 111 222</a></p>
+            <p><strong>Satellite Phone (in the field):</strong> +870 776 444 555</p>
+        </section>
+
+        <section id="social">
+            <h2>Follow Us</h2>
+            <p>Stay connected and see our latest safari updates:</p>
+            <p><a href="https://www.instagram.com/" target="_blank">
+                    <img src="instagram.svg" alt="instagram icon" width="40px"/> </a>
+                
+                <a href="https://www.facebook.com/ target="_blank">
+                    <img src="facebook.svg" alt="facebook icon" width="40px"/> </a>
+                
+                <a href="https://x.com/"target="_blank">
+                    <img src="x.svg" alt="X icon" width="40px"/> </a>
+                
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="Youtube.svg" alt="Youtube icon" width="40px"/> </a>
+                
+                <a href="https://www.tripadvisor.com" target="_blank">
+                    <img src="tripadvisor.svg" alt="TripAdvisor icon" width="40px"/> </a>
+                
+            </p>
+
+        </section>
+
+    </main>
+
+  
+   <footer>
+        <h3>Safari Horizon Tours</h3>
+        <p>&copy;2025 Safari Horizon Tours. All Rights Reserved.</p>
+        <p>Address:<a href="address: 14 Kenyatta Avenue, Suite 302, Nairobi 00100, Kenya"> 14 Kenyatta Avenue, Suite 302, Nairobi 00100, Kenya</a></p>
+        <p>Phone:<a href="tel: +254 700 111 222"> +254 700 111 222</a></p>
+        <p>Email:<a href="mailto: info@safarihorizontours.co.ke">info@safarihorizontours.co.ke</a></p>
+    </footer>
+</body>
+</html>
