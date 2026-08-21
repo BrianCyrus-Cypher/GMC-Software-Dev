@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure HTML & CSS Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#grid">Grid Layout</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#dialog">Dialog</a></li>
+                <li><a href="#scroll">Scroll Snap</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h1>Pure HTML & CSS Showcase</h1>
+            <p>This website demonstrates the power and versatility of modern HTML and CSS, without a single line of JavaScript. Explore the various sections to see advanced layout techniques, animations, responsive design, and more.</p>
+            <div class="gradient-bg">
+                <p>Experience the beauty of CSS gradients and filters!</p>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2>Key Features Demonstrated</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>CSS Variables</h3>
+                    <p>Maintain consistency with custom properties.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Flexbox & Grid</h3>
+                    <p>Powerful layout systems for responsive designs.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Animations & Transitions</h3>
+                    <p>Smooth and engaging user interfaces.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Responsive Design</h3>
+                    <p>Adapts to any screen size with Media Queries.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Pseudo-classes & Elements</h3>
+                    <p>Dynamic styling based on state and position.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Modern Selectors</h3>
+                    <p>:has(), :is(), :where() for advanced targeting.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Logical Properties</h3>
+                    <p>Flow-relative styling for internationalization.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Container Queries</h3>
+                    <p>Component-level responsiveness.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="grid">
+            <h2>CSS Grid Layout Example</h2>
+            <p>This section uses CSS Grid to arrange content in a flexible and responsive manner.</p>
+            <div class="grid-container">
+                <article class="grid-item">
+                    <h3>Grid Item One</h3>
+                    <p>Content for grid item one.</p>
+                    <div class="animated-box"></div>
+                </article>
+                <article class="grid-item">
+                    <h3>Grid Item Two</h3>
+                    <p>Content for grid item two.</p>
+                    <img src="https://via.placeholder.com/150/2ecc71/ffffff?text=Image+2" alt="Placeholder Image 2" class="filtered-image">
+                </article>
+                <article class="grid-item">
+                    <h3>Grid Item Three</h3>
+                    <p>Content for grid item three.</p>
+                    <picture> <!-- HTML Picture/Source elements -->
+                        <source srcset="https://via.placeholder.com/300/3498db/ffffff?text=Large" media="(min-width: 600px)">
+                        <img src="https://via.placeholder.com/150/3498db/ffffff?text=Small" alt="Responsive Image" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                    </picture>
+                </article>
+            </div>
+        </section>
+
+        <section id="forms">
+            <h2>HTML Forms with Validation</h2>
+            <p>A fully functional form demonstrating HTML5 validation attributes.</p>
+            <form data-form-type="contact"> <!-- HTML Data attributes -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required pattern="[A-Za-z ]+" title="Name should only contain letters and spaces">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <h2>Details/Summary Element</h2>
+            <details>
+                <summary>Click to reveal more information</summary>
+                <p>This is additional content hidden by default, revealed when the summary is clicked. It's great for FAQs or progressive disclosure.</p>
+                <ul class="list-with-markers">
+                    <li>Item one</li>
+                    <li>Item two</li>
+                    <li>Item three</li>
+                </ul>
+            </details>
+        </section>
+
+        <section id="dialog">
+            <h2>HTML Dialog Element</h2>
+            <p>The native HTML <code>&lt;dialog&gt;</code> element for pop-ups and modals. Note: Opening the dialog requires minimal JavaScript for the showModal() API, but the dialog styling and backdrop are pure CSS.</p>
+            <dialog id="myDialog" open>
+                <h3>Welcome to the Dialog!</h3>
+                <p>This is a native HTML dialog box. It's great for alerts, confirmations, or displaying additional content without navigating away.</p>
+                <form method="dialog">
+                    <button type="submit">Close</button>
+                </form>
+            </dialog>
+        </section>
+
+        <section id="scroll">
+            <h2>CSS Scroll Snap Example</h2>
+            <p>Scroll horizontally through these items, and they will snap into place.</p>
+            <div class="scroll-snap-container">
+                <div class="scroll-snap-item">
+                    <h3>Item 1</h3>
+                    <p>This is the first scroll-snapped item.</p>
+                </div>
+                <div class="scroll-snap-item">
+                    <h3>Item 2</h3>
+                    <p>This is the second scroll-snapped item.</p>
+                </div>
+                <div class="scroll-snap-item">
+                    <h3>Item 3</h3>
+                    <p>This is the third scroll-snapped item.</p>
+                </div>
+                <div class="scroll-snap-item">
+                    <h3>Item 4</h3>
+                    <p>This is the fourth scroll-snapped item.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="container-queries">
+            <h2>CSS Container Queries</h2>
+            <p>Observe how the styling of the card below changes based on the width of its parent container, not the viewport.</p>
+            <div class="card-container">
+                <h3>Responsive Card Title</h3>
+                <p>This paragraph will change its font size and the title color will change when the container is wide enough.</p>
+                <div class="logical-box">
+                    <p>This box uses logical properties for padding and border.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out with any questions!</p>
+            <aside>
+                <p><strong>Note:</strong> This is a static demo. Form submission will not actually send data.</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pure HTML & CSS Showcase. All rights reserved.</p>
+    </footer>
+</body>
+</html>
