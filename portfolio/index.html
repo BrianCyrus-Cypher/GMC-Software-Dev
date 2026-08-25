@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfolio website for Brian Mwangi, Full Stack Software Developer." />
@@ -8,32 +9,39 @@
   </head>
 
   <body>
-    <header>
-      <h1>Brian Mwangi</h1>
-      <p>Full Stack Software Developer</p>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <p class="eyebrow">Portfolio / Nairobi</p>
+          <h1>Brian Mwangi</h1>
+          <p class="tagline">Full Stack Software Developer</p>
+        </div>
 
-      <nav aria-label="Main navigation">
-        <a href="#home">Home</a> |
-        <a href="#about">About</a> |
-        <a href="#work">Work</a> |
-        <a href="#resume">Resume</a> |
-        <a href="#contact">Contact</a>
-      </nav>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section id="home">
-        <h2>Home</h2>
+      <section class="hero section" id="home">
+        <p class="section-label">01 / Introduction</p>
+        <h2>Building useful digital tools for <em>real work.</em></h2>
         <p>
           Hello, I am <strong>Brian Mwangi</strong>, a Full Stack Software Developer based in Nairobi, Kenya.
           I build websites, web applications, APIs, databases, and automation solutions.
         </p>
-        <p><a href="#contact">Contact me about a project</a></p>
+        <p><a class="button-link" href="#contact">Contact me about a project <span aria-hidden="true">↗</span></a></p>
       </section>
 
       <hr />
 
-      <section id="about">
+      <section class="section about-section" id="about">
+        <p class="section-label">02 / About</p>
         <h2>About Me</h2>
         <p>
           I enjoy creating useful and reliable software. I work on both the front end that users see and the back end that powers an application.
@@ -41,7 +49,7 @@
         </p>
 
         <h3>My Skills</h3>
-        <ul>
+        <ul class="skill-list">
           <li>HTML, CSS, JavaScript, and React</li>
           <li>Node.js, Python, and REST APIs</li>
           <li>Databases and data management</li>
@@ -50,13 +58,13 @@
         </ul>
 
         <h3>Portfolio Video</h3>
-        <video controls width="500">
+        <video class="media-frame" controls width="500">
           <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
           Your browser does not support the video element.
         </video>
 
         <h3>Portfolio Audio</h3>
-        <audio controls>
+        <audio class="audio-player" controls>
           <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
@@ -64,31 +72,32 @@
 
       <hr />
 
-      <section id="work">
+      <section class="section work-section" id="work">
+        <p class="section-label">03 / Selected work</p>
         <h2>My Work</h2>
 
-        <article>
+        <article class="project-card">
           <h3>Business Workflow Automator</h3>
           <p>
             A full stack dashboard concept that helps businesses reduce repeated data-entry work and organize operational records.
           </p>
         </article>
 
-        <article>
+        <article class="project-card">
           <h3>Trading Signals Toolkit</h3>
           <p>
             A web application concept for connecting market data, trading strategies, and useful automation.
           </p>
         </article>
 
-        <article>
+        <article class="project-card">
           <h3>Document Data Extractor</h3>
           <p>
             A Python and OCR-based application for extracting data from scanned documents and saving it into digital records.
           </p>
         </article>
 
-        <article>
+        <article class="project-card">
           <h3>Client Acquisition Website</h3>
           <p>
             A responsive website designed to explain services, collect leads, and help a business grow online.
@@ -98,11 +107,12 @@
 
       <hr />
 
-      <section id="resume">
+      <section class="section resume-section" id="resume">
+        <p class="section-label">04 / Experience</p>
         <h2>Resume</h2>
         <p>This table summarizes my current software development skills.</p>
 
-        <table border="1">
+        <table class="resume-table">
           <thead>
             <tr>
               <th>Area</th>
@@ -144,11 +154,12 @@
 
       <hr />
 
-      <section id="contact">
+      <section class="section contact-section" id="contact">
+        <p class="section-label">05 / Start a conversation</p>
         <h2>Contact Me</h2>
         <p>Please send a message using the form below.</p>
 
-        <form action="#form-success" method="get">
+        <form class="contact-form" action="#form-success" method="get">
           <fieldset>
             <legend>Contact Form</legend>
 
@@ -188,7 +199,7 @@
 
     <hr />
 
-    <footer>
+    <footer class="site-footer">
       <p>© 2026 Brian Mwangi | Full Stack Software Developer</p>
       <p><a href="#home">Back to top</a></p>
     </footer>
