@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Morrow Kenya - useful everyday products selected for modern Kenyan living.">
+    <title>Bag it Kenya | Everyday goods, thoughtfully chosen</title>
+
+    <!-- External font and Bootstrap resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Site header and responsive navigation -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#home">Bag it<span>.</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#storeNav" aria-controls="storeNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="storeNav">
+                    <ul class="navbar-nav mx-auto gap-lg-4">
+                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#story">Our story</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                    <a class="bag-link" href="#shop" aria-label="Shopping bag"><i class="bi bi-bag"></i><span>0</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero introduction with a direct call to the product collection -->
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="row align-items-end g-4">
+                    <div class="col-lg-7">
+                        <p class="kicker">New collection · 2026</p>
+                        <h1>Good things<br><em>take shape.</em></h1>
+                    </div>
+                    <div class="col-lg-4 offset-lg-1">
+                        <p class="hero-description">Useful products for Kenyan homes, better workspaces, and the everyday rituals in between.</p>
+                        <a class="button button-dark" href="#shop">Shop the collection <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product grid built with Bootstrap responsive columns -->
+        <section id="shop" class="shop-section section-padding">
+            <div class="container">
+                <div class="section-top d-flex flex-column flex-md-row justify-content-between align-items-md-end">
+                    <div><p class="kicker">The Kenya edit</p><h2>Goods for<br><em>everyday use.</em></h2></div>
+                    <p class="section-note">A practical selection inspired by what Kenyan shoppers are looking for online.</p>
+                </div>
+                <div class="row g-4 mt-3">
+                    <div class="col-sm-6 col-lg-3">
+                        <article class="product-card h-100">
+                            <div class="product-image"><img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/34/2665823/1.jpg?3186" alt="Kola twisted column table lamp in black and white" loading="lazy"><span class="product-label">47% off</span></div>
+                            <div class="product-info"><div class="product-meta"><h3>Kola Twisted Column Lamp</h3><div><span>KSh 4,000</span><del>KSh 7,500</del></div></div><p>Made-in-Kenya bedside and desk lamp with warm ambient light, 30cm, black and white.</p><a href="https://www.jumia.co.ke/generic-kola-twisted-column-table-lamp-made-in-kenya-bedside-desk-lamp-warm-ambient-light-30cm-black-white-328566243.html" target="_blank" rel="noopener" class="shop-link">View on Jumia <i class="bi bi-arrow-up-right"></i></a></div>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <article class="product-card h-100">
+                            <div class="product-image"><img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/17/3760923/1.jpg?8018" alt="Oraimo Watch 6 Lite OSW-809 smartwatch" loading="lazy"><span class="product-label">20% off</span></div>
+                            <div class="product-info"><div class="product-meta"><h3>Oraimo Watch 6 Lite</h3><div><span>KSh 1,997</span><del>KSh 2,500</del></div></div><p>2.01-inch HD smartwatch with wireless calling and IP68 waterproof protection in black.</p><a href="https://www.jumia.co.ke/oraimo-watch-6-lite-osw-809-2.01-hd-smartwatch-wireless-calling-ip68-waterproof-black-329067371.html" target="_blank" rel="noopener" class="shop-link">View on Jumia <i class="bi bi-arrow-up-right"></i></a></div>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <article class="product-card h-100">
+                            <div class="product-image"><img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/31/3233923/2.jpg?7778" alt="A5 leather cover lined notebook with pen holder" loading="lazy"><span class="product-label">38% off</span></div>
+                            <div class="product-info"><div class="product-meta"><h3>A5 Leather Cover Notebook</h3><div><span>KSh 2,750</span><del>KSh 4,399</del></div></div><p>192-page, 80gsm lined writing journal with button closure and pen holder for school or office.</p><a href="https://www.jumia.co.ke/generic-a5-leather-cover-lined-notebook-with-button-closure-and-pen-holder-192-pages-80gsm-writing-journal-for-school-office-work-and-personal-notes-329332313.html" target="_blank" rel="noopener" class="shop-link">View on Jumia <i class="bi bi-arrow-up-right"></i></a></div>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <article class="product-card h-100">
+                            <div class="product-image"><img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/55/9462603/1.jpg?0947" alt="Ceramic Rick and Morty character mug" loading="lazy"><span class="product-label">50% off</span></div>
+                            <div class="product-info"><div class="product-meta"><h3>Ceramic Rick &amp; Morty Mug</h3><div><span>KSh 2,500</span><del>KSh 5,000</del></div></div><p>A playful ceramic Rick &amp; Morty mug for your morning tea, coffee, or hot chocolate.</p><a href="https://www.jumia.co.ke/ceramic-rick-morty-mug-mt-306264955.html" target="_blank" rel="noopener" class="shop-link">View on Jumia <i class="bi bi-arrow-up-right"></i></a></div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand story section adds context below the product collection -->
+        <section id="story" class="story-section section-padding">
+            <div class="container"><div class="row align-items-center g-5">
+                <div class="col-lg-6"><img class="story-image" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?w=1200&q=85" alt="Bright, calm workspace with wooden furniture" loading="lazy"></div>
+                <div class="col-lg-5 offset-lg-1"><p class="kicker">Why Bag it</p><h2>Less noise.<br><em>More meaning.</em></h2><p class="story-copy">We choose useful products that earn their place in Kenyan homes. From reliable electronics to simple desk and kitchen essentials, every pick is easy to understand and made for real life.</p><a href="#contact" class="button button-outline">Read our story <i class="bi bi-arrow-up-right"></i></a></div>
+            </div></div>
+        </section>
+
+        <!-- Contact area gives the landing page a simple next step -->
+        <section id="contact" class="contact-section section-padding"><div class="container"><div class="row g-5 align-items-end"><div class="col-lg-6"><p class="kicker">Stay in the loop</p><h2>Good mail,<br><em>occasionally.</em></h2></div><div class="col-lg-5 offset-lg-1"><p class="section-note mb-4">New arrivals, studio notes, and the occasional useful thought. No clutter.</p><form class="signup-form"><label for="email">Email address</label><div class="input-group"><input type="email" id="email" class="form-control" placeholder="you@example.com" required><button class="button button-dark" type="submit">Join</button></div></form></div></div></div></section>
+    </main>
+
+    <!-- Footer with navigation and external social destinations -->
+    <footer class="site-footer"><div class="container d-flex flex-column flex-md-row justify-content-between gap-4"><div><a class="footer-brand" href="#home">Bag it.</span></a><p class="footer-copy">Useful things for a life well lived.</p></div><div class="footer-links"><a href="#shop">Shop</a><a href="#story">Our story</a><a href="#contact">Contact</a></div><div class="social-links"><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="https://www.pinterest.com/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a></div></div><div class="container footer-bottom"><span>© 2026 Morrow Goods</span><span>Made for tomorrow</span></div></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
