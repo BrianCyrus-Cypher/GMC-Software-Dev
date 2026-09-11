@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Metadata and title identify the final stage as a standalone project. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Everyday Pantry | JavaScript stage</title>
+    <!-- This stage uses the Tailwind CDN so its single folder opens by itself. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-[#f7f4ed] p-4 font-sans text-[#17202a] sm:p-8">
+    <!-- main contains the same product, now with a behavior layer. -->
+    <main class="mx-auto max-w-5xl">
+      <header class="border-2 border-[#17202a] bg-[#a9d6c5] p-6 shadow-[8px_8px_0_#17202a] sm:p-10">
+        <!-- This label identifies the language added at this stage. -->
+        <p class="text-xs font-bold uppercase tracking-[0.14em] text-[#ef7657]">Stage 04 / JavaScript</p>
+        <h1 class="mt-3 font-serif text-5xl font-bold leading-none sm:text-7xl">Everyday Pantry</h1>
+        <p class="mt-5 max-w-xl text-lg leading-8">Add, filter, complete, and remember the things at home.</p>
+      </header>
+
+      <div class="mt-8 grid gap-4 lg:grid-cols-[.8fr_1.2fr]">
+        <!-- Form events let JavaScript add a new object to the pantry array. -->
+        <section class="border-2 border-[#17202a] bg-white p-6" aria-labelledby="add-heading">
+          <h2 id="add-heading" class="font-serif text-3xl font-bold">Add an item</h2>
+          <form id="item-form" class="mt-6 grid gap-3">
+            <!-- The label is still required even when JavaScript controls submission. -->
+            <label class="text-sm font-bold" for="item-name">Item name</label>
+            <input class="border-2 border-[#17202a] p-3 focus:outline-2 focus:outline-offset-2 focus:outline-[#f6c85f]" id="item-name" type="text" required />
+            <label class="text-sm font-bold" for="item-category">Category</label>
+            <select class="border-2 border-[#17202a] bg-white p-3" id="item-category"><option>Pantry</option><option>Fresh</option><option>Home</option></select>
+            <!-- type=submit triggers the form submit event in app.js. -->
+            <button class="border-2 border-[#17202a] bg-[#ef7657] p-3 font-bold transition hover:-translate-y-1" type="submit">Add to pantry</button>
+          </form>
+          <!-- This status region gives screen readers feedback after an action. -->
+          <p id="status-message" class="mt-4 text-sm" role="status" aria-live="polite"></p>
+        </section>
+
+        <!-- Rendering functions replace the static list from the previous stage. -->
+        <section class="border-2 border-[#17202a] bg-[#17202a] p-6 text-[#f7f4ed]" aria-labelledby="list-heading">
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <div><h2 id="list-heading" class="font-serif text-3xl font-bold">Your pantry</h2><p class="mt-2 text-sm text-[#f7f4ed]/70"><span id="item-count">0</span> items saved</p></div>
+            <!-- Filter buttons change the active category in JavaScript. -->
+            <div id="filter-buttons" class="flex flex-wrap gap-2" aria-label="Filter pantry items"></div>
+          </div>
+          <!-- JavaScript inserts li elements into this list from data. -->
+          <ul id="pantry-list" class="mt-6 divide-y divide-[#f7f4ed]/20"></ul>
+          <!-- This message is shown when a filter has no matching records. -->
+          <p id="empty-message" class="mt-6 hidden text-sm text-[#f7f4ed]/70">No items match this filter.</p>
+        </section>
+      </div>
+
+      <!-- A code note makes the progression explicit for the learner. -->
+      <aside class="mt-8 border-2 border-[#17202a] bg-[#f6c85f] p-5 text-sm leading-6"><strong>What JavaScript added:</strong> an array of objects, event listeners, <code>filter</code>, <code>map</code>, <code>localStorage</code>, and a render function that keeps the HTML in sync with data.</aside>
+    </main>
+    <!-- defer waits for the document, while the external file keeps behavior readable. -->
+    <script src="app.js" defer></script>
+  </body>
+</html>

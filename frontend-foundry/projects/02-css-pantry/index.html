@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- The document keeps the exact semantic structure from stage one. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Everyday Pantry | CSS stage</title>
+    <!-- CSS is now responsible for appearance, not HTML attributes. -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- main receives the page layout and the visual background. -->
+    <main class="page-shell">
+      <!-- header is styled as the product introduction panel. -->
+      <header class="hero">
+        <p class="eyebrow">Stage 02 / CSS</p>
+        <h1>Everyday Pantry</h1>
+        <p>A simple list for knowing what is at home.</p>
+      </header>
+      <div class="workspace">
+        <!-- form-card groups the input controls into a focused surface. -->
+        <section class="panel" aria-labelledby="add-heading">
+          <h2 id="add-heading">Add an item</h2>
+          <form action="#pantry-list" method="get">
+            <label for="item-name">Item name</label>
+            <input id="item-name" name="item-name" type="text" placeholder="e.g. lentils" required />
+            <button type="submit">Add to pantry</button>
+          </form>
+        </section>
+        <!-- pantry list uses the same semantic HTML while CSS creates columns and spacing. -->
+        <section class="panel" aria-labelledby="list-heading">
+          <h2 id="list-heading">Your pantry</h2>
+          <ul id="pantry-list">
+            <li>Oats <span>Pantry</span></li>
+            <li>Beans <span>Pantry</span></li>
+            <li>Tea <span>Pantry</span></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

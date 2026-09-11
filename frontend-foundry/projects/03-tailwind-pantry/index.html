@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Metadata provides correct encoding and responsive behavior. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Everyday Pantry | Tailwind stage</title>
+    <!-- CDN keeps this teaching stage independently openable; the main app uses the Vite plugin. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <!-- Utility classes style the page directly; each class names a CSS decision. -->
+  <body class="min-h-screen bg-[#f7f4ed] p-4 font-sans text-[#17202a] sm:p-8">
+    <!-- max-w and mx-auto create a readable centered container. -->
+    <main class="mx-auto max-w-5xl">
+      <!-- bg, border, padding, and shadow recreate the CSS-stage hero with utilities. -->
+      <header class="border-2 border-[#17202a] bg-[#a9d6c5] p-6 shadow-[8px_8px_0_#17202a] sm:p-10">
+        <!-- uppercase, tracking, and text color explain the label utility family. -->
+        <p class="text-xs font-bold uppercase tracking-[0.14em] text-[#ef7657]">Stage 03 / Tailwind CSS</p>
+        <!-- font and responsive text utilities create a scalable heading. -->
+        <h1 class="mt-3 font-serif text-5xl font-bold leading-none sm:text-7xl">Everyday Pantry</h1>
+        <!-- max-w controls the measure so the line remains easy to read. -->
+        <p class="mt-5 max-w-xl text-lg leading-8">A simple list for knowing what is at home.</p>
+      </header>
+
+      <!-- grid, gap, and breakpoint variants replace the CSS media query. -->
+      <div class="mt-8 grid gap-4 md:grid-cols-2">
+        <!-- rounded and background utilities create a reusable panel. -->
+        <section class="border-2 border-[#17202a] bg-white p-6" aria-labelledby="add-heading">
+          <h2 id="add-heading" class="font-serif text-3xl font-bold">Add an item</h2>
+          <!-- grid and gap stack form controls without a custom selector. -->
+          <form class="mt-6 grid gap-3" action="#pantry-list" method="get">
+            <!-- label and text utilities name and size the control. -->
+            <label class="text-sm font-bold" for="item-name">Item name</label>
+            <!-- border, padding, placeholder, and focus variants describe states in place. -->
+            <input class="border-2 border-[#17202a] p-3 placeholder:text-[#17202a]/50 focus:outline-2 focus:outline-offset-2 focus:outline-[#f6c85f]" id="item-name" name="item-name" type="text" placeholder="e.g. lentils" required />
+            <!-- hover and focus-visible variants document interaction without custom CSS. -->
+            <button class="border-2 border-[#17202a] bg-[#ef7657] p-3 font-bold transition hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f6c85f]" type="submit">Add to pantry</button>
+          </form>
+        </section>
+
+        <!-- The same list structure now demonstrates divide utilities and flex alignment. -->
+        <section class="border-2 border-[#17202a] bg-white p-6" aria-labelledby="list-heading">
+          <h2 id="list-heading" class="font-serif text-3xl font-bold">Your pantry</h2>
+          <ul id="pantry-list" class="mt-6 divide-y divide-[#a9d6c5]">
+            <!-- flex, justify-between, and py control each row's layout and spacing. -->
+            <li class="flex justify-between gap-4 py-3"><span>Oats</span><span class="text-xs font-bold uppercase tracking-wider text-[#ef7657]">Pantry</span></li>
+            <li class="flex justify-between gap-4 py-3"><span>Beans</span><span class="text-xs font-bold uppercase tracking-wider text-[#ef7657]">Pantry</span></li>
+            <li class="flex justify-between gap-4 py-3"><span>Tea</span><span class="text-xs font-bold uppercase tracking-wider text-[#ef7657]">Pantry</span></li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Links connect a learner to the cheat sheet used to find unfamiliar utilities. -->
+      <footer class="mt-8 flex flex-wrap gap-4 text-sm font-bold">
+        <a class="underline underline-offset-4" href="https://flowbite.com/tools/tailwind-cheat-sheet/" target="_blank" rel="noreferrer">Open Flowbite cheat sheet ↗</a>
+        <a class="underline underline-offset-4" href="../04-javascript-pantry/index.html">Continue to JavaScript stage ↗</a>
+      </footer>
+    </main>
+  </body>
+</html>

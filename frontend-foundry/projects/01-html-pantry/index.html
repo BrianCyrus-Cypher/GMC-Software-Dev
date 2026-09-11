@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Metadata tells the browser how to interpret and scale this document. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Everyday Pantry | HTML stage</title>
+  </head>
+  <body>
+    <!-- main names the page's primary content for browsers and assistive technology. -->
+    <main>
+      <!-- header introduces the product and its purpose. -->
+      <header>
+        <!-- h1 is the page's single top-level heading. -->
+        <h1>Everyday Pantry</h1>
+        <!-- p explains the job before a learner sees any controls. -->
+        <p>A simple list for knowing what is at home.</p>
+      </header>
+
+      <!-- section groups one related workflow and gives it a heading. -->
+      <section aria-labelledby="add-heading">
+        <h2 id="add-heading">Add an item</h2>
+        <!-- form represents a user submission, even before JavaScript exists. -->
+        <form action="#pantry-list" method="get">
+          <!-- label names the input so keyboard and screen-reader users know its purpose. -->
+          <label for="item-name">Item name</label>
+          <!-- input collects a short piece of user data. -->
+          <input id="item-name" name="item-name" type="text" required />
+          <!-- button submits the form using native browser behavior. -->
+          <button type="submit">Add to pantry</button>
+        </form>
+      </section>
+
+      <!-- section separates the stored items from the input workflow. -->
+      <section aria-labelledby="list-heading">
+        <h2 id="list-heading">Your pantry</h2>
+        <!-- ul is the correct semantic element for a collection of peer items. -->
+        <ul id="pantry-list">
+          <!-- li represents one pantry record. -->
+          <li>Oats</li>
+          <li>Beans</li>
+          <li>Tea</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
