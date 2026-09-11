@@ -12,6 +12,17 @@
   --font-sans: "Trebuchet MS", sans-serif;
 }
 
+/* Raw-browser fallback: these tokens also work when index.html is opened directly. */
+:root {
+  --color-ink: #17202a;
+  --color-paper: #f7f4ed;
+  --color-coral: #ef7657;
+  --color-mint: #a9d6c5;
+  --color-sun: #f6c85f;
+  --font-display: Georgia, serif;
+  --font-sans: "Trebuchet MS", sans-serif;
+}
+
 /* FOUNDATIONS: predictable sizing, smooth anchors, and accessible focus. */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
