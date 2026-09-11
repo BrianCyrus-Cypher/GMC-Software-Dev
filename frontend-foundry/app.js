@@ -1,11 +1,11 @@
 // DATA: each record is one finished workspace project and one learning checkpoint.
 const projects = [
-  { id: "recipe-page", title: "Recipe page", folder: "recipe-page-main", language: "HTML + CSS", level: "Foundations", image: "./reference-images/omelette.jpeg", alt: "Omelette on a plate", summary: "A content-first recipe layout for learning semantic sections, typography, spacing, and responsive composition.", concepts: ["semantic HTML", "CSS layout", "responsive design"], link: "../recipe-page-main/index.html" },
-  { id: "dessert-shop", title: "Dessert shop cart", folder: "product-list-with-cart-main", language: "HTML + CSS + JavaScript", level: "Interactive UI", image: "./reference-images/waffle.jpg", alt: "Waffle with berries", summary: "A product grid and cart workflow for learning responsive images, cards, data, events, and persistent interface states.", concepts: ["product cards", "cart state", "forms"], link: "../product-list-with-cart-main/index.html" },
-  { id: "testimonials", title: "Testimonials grid", folder: "testimonials-concord", language: "HTML + CSS", level: "Layout systems", image: "./reference-images/daniel.jpg", alt: "Testimonial author portrait", summary: "A dense editorial grid for practicing CSS Grid areas, Flexbox alignment, contrast, and mobile layout changes.", concepts: ["CSS Grid", "Flexbox", "accessibility"], link: "../testimonials-concord/index.html" },
-  { id: "social-profile", title: "Social links profile", folder: "social-links-profile-main", language: "HTML + CSS", level: "Component styling", image: "./reference-images/brian.jpg", alt: "Profile portrait", summary: "A focused profile surface for learning reusable card structure, buttons, hover states, and visual hierarchy.", concepts: ["cards", "states", "typography"], link: "../social-links-profile-main/index.html" },
-  { id: "react-studio", title: "React Product Studio", folder: "react-product-studio", language: "React", level: "Application thinking", image: "./reference-images/daniel.jpg", alt: "Learning studio visual", summary: "A real React learning product that demonstrates components, state, filtering, checklists, UX states, and product documents.", concepts: ["components", "useState", "product UX"], link: "../react-product-studio/index.html" },
-  { id: "frontend-foundry", title: "Frontend Foundry", folder: "frontend-foundry", language: "Vite + Tailwind + JavaScript", level: "Meta project", image: "./reference-images/omelette.jpeg", alt: "Recipe project reference image", summary: "This learning library itself: a maintained index for turning every new workspace project into a documented lesson.", concepts: ["Vite", "Tailwind", "progress tracking"], link: "index.html" },
+  { id: "recipe-page", title: "Recipe page", folder: "recipe-page-main", language: "HTML + CSS", level: "Foundations", image: "./reference-images/omelette.jpeg", alt: "Omelette on a plate", summary: "A content-first recipe layout for learning semantic sections, typography, spacing, and responsive composition.", concepts: ["semantic HTML", "CSS layout", "responsive design"] },
+  { id: "dessert-shop", title: "Dessert shop cart", folder: "product-list-with-cart-main", language: "HTML + CSS + JavaScript", level: "Interactive UI", image: "./reference-images/waffle.jpg", alt: "Waffle with berries", summary: "A product grid and cart workflow for learning responsive images, cards, data, events, and persistent interface states.", concepts: ["product cards", "cart state", "forms"] },
+  { id: "testimonials", title: "Testimonials grid", folder: "testimonials-concord", language: "HTML + CSS", level: "Layout systems", image: "./reference-images/daniel.jpg", alt: "Testimonial author portrait", summary: "A dense editorial grid for practicing CSS Grid areas, Flexbox alignment, contrast, and mobile layout changes.", concepts: ["CSS Grid", "Flexbox", "accessibility"] },
+  { id: "social-profile", title: "Social links profile", folder: "social-links-profile-main", language: "HTML + CSS", level: "Component styling", image: "./reference-images/brian.jpg", alt: "Profile portrait", summary: "A focused profile surface for learning reusable card structure, buttons, hover states, and visual hierarchy.", concepts: ["cards", "states", "typography"] },
+  { id: "react-studio", title: "React Product Studio", folder: "react-product-studio", language: "React", level: "Application thinking", image: "./reference-images/daniel.jpg", alt: "Learning studio visual", summary: "A real React learning product that demonstrates components, state, filtering, checklists, UX states, and product documents.", concepts: ["components", "useState", "product UX"] },
+  { id: "frontend-foundry", title: "Frontend Foundry", folder: "frontend-foundry", language: "Vite + Tailwind + JavaScript", level: "Meta project", image: "./reference-images/omelette.jpeg", alt: "Recipe project reference image", summary: "This learning library itself: a maintained index for turning every new workspace project into a documented lesson.", concepts: ["Vite", "Tailwind", "progress tracking"] },
 ];
 
 // STATE: search, language, and completion survive navigation through this page session.
@@ -24,6 +24,14 @@ const progressPercent = document.querySelector("#progress-percent");
 const progressBar = document.querySelector("#progress-bar");
 const progressTrack = document.querySelector("[role=progressbar]");
 const progressMessage = document.querySelector("#progress-message");
+
+// URLS: local files use relative links; Vite uses the workspace route above for sibling projects.
+function getProjectHref(project) {
+  if (project.folder === "frontend-foundry") return "./index.html";
+  return window.location.protocol === "file:"
+    ? `../${project.folder}/index.html`
+    : `./workspace-projects/${project.folder}/index.html`;
+}
 
 // DERIVED DATA: language filters are collected from the same records that render cards.
 function getLanguages() {
@@ -59,9 +67,10 @@ function renderProjects() {
   const visibleProjects = getVisibleProjects();
   projectGrid.innerHTML = visibleProjects.map((project) => {
     const isComplete = completedProjects.has(project.id);
+    const projectHref = getProjectHref(project);
     return `
       <article class="project-card ${isComplete ? "project-card--complete" : ""}">
-        <a class="project-card__image" href="${project.link}" aria-label="Open ${project.title}">
+        <a class="project-card__image" href="${projectHref}" aria-label="Open ${project.title}">
           <img src="${project.image}" alt="${project.alt}" />
           <span class="project-card__level">${project.level}</span>
         </a>
@@ -71,7 +80,7 @@ function renderProjects() {
           <p>${project.summary}</p>
           <div class="project-card__concepts">${project.concepts.map((concept) => `<span>${concept}</span>`).join("")}</div>
           <div class="project-card__actions">
-            <a class="text-link" href="${project.link}">Open project ↗</a>
+            <a class="text-link" href="${projectHref}">Open project ↗</a>
             <button class="complete-button" data-project="${project.id}" aria-pressed="${isComplete}">${isComplete ? "Completed" : "Mark complete"}</button>
           </div>
         </div>

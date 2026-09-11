@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-500: hsl(0, 0%, 75%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  background-color: var(--grey-900);
+  color: var(--white);
+  padding: 1.5rem;
+}
+
+.card {
+  background-color: var(--grey-800);
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  width: min(100%, 24rem);
+  text-align: center;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.card__header {
+  margin-bottom: 1.5rem;
+}
+
+.avatar {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+}
+
+.name {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.location {
+  margin: 0.5rem 0 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.bio {
+  margin: 0 0 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--grey-500);
+}
+
+.links__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.links__list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--grey-700);
+  color: var(--white);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.links__list a:hover,
+.links__list a:focus-visible {
+  background-color: var(--green);
+  color: var(--grey-900);
+  transform: translateY(-1px);
+}
+
+.links__list a:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
